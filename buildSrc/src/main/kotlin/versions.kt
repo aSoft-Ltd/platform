@@ -1,12 +1,17 @@
 object vers {
-    val kotlin = "1.4.21"
+    val kotlin = "1.5.10"
     val nexus_staging = "0.22.0"
 
+    object kotlinx {
+        val serialization = "1.2.1"
+    }
+
+    object npm {
+        val platform = "1.3.6"
+    }
+
     object asoft {
-        val live = "0.0.30"
-        val test = "1.1.30"
         val builders = "1.3.30"
         val expect = "0.0.30"
-        val reakt = "0.1.10"
     }
 }
