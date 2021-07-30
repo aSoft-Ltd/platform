@@ -3,6 +3,8 @@ plugins {
     kotlin("multiplatform")
     kotlin("plugin.serialization")
     id("tz.co.asoft.library")
+    id("io.codearte.nexus-staging")
+    signing
 }
 
 kotlin {
@@ -51,7 +53,7 @@ kotlin {
 
         val jsMain by getting {
             dependencies {
-                api(npm("platform",vers.npm.platform))
+                api(npm("platform", vers.npm.platform))
             }
         }
 
@@ -66,3 +68,9 @@ kotlin {
         }
     }
 }
+
+
+aSoftOSSLibrary(
+    version = vers.platform,
+    description = "A Kotlin Multiplatform Library for detecting Platforms"
+)

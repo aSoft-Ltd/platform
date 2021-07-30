@@ -2,6 +2,8 @@ object vers {
     val kotlin = "1.5.10"
     val nexus_staging = "0.22.0"
 
+    val platform = "0.0.10"
+
     object kotlinx {
         val serialization = "1.2.1"
     }

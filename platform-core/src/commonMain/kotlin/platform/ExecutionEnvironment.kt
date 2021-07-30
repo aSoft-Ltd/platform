@@ -6,7 +6,8 @@ import kotlinx.serialization.Serializable
 open class ExecutionEnvironment(
     open val name: String,
     open val runner: Runner,
-    open val os: OperatingSystem
+    open val os: OperatingSystem,
+    val version: String
 ) {
     @Serializable
     class Runner(

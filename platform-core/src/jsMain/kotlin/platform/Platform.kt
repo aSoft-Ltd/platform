@@ -1,5 +1,8 @@
 package platform
 
+import platform.node.process
+import platform.npm.Platform
+
 private val browserCheckFunction = Function("try {return this===window;}catch(e){ return false;}")
 private val nodeCheckFunction = Function("try {return this===global;}catch(e){return false;}")
 
@@ -21,6 +24,11 @@ actual object Platform : ExecutionEnvironment(
         isBrowser -> detectOsInBrowser()
         isNode -> detectOsInNode()
         else -> OperatingSystem("Unknown", "Unknown")
+    },
+    version = when {
+        isBrowser -> require<Platform>("platform").version
+        isNode -> process.version
+        else -> "Unknown"
     }
 )
 

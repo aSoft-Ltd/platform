@@ -12,6 +12,9 @@ class PlatformTest {
 
     @Test
     fun should_print_the_serialized_values() {
-        println(Json.encodeToString(ExecutionEnvironment.serializer(), Platform))
+        val platform = Platform
+        val serializer = ExecutionEnvironment.serializer()
+        val json = Json.encodeToString(serializer, platform)
+        println(json)
     }
 }
