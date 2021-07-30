@@ -9,5 +9,6 @@ actual object Platform : ExecutionEnvironment(
     os = OperatingSystem(
         family = System.getProperty("os.name"),
         version = System.getProperty("os.version")
-    )
+    ),
+    version = System.getProperty("java.version")
 )

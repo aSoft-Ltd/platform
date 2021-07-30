@@ -9,5 +9,6 @@ actual object Platform : ExecutionEnvironment(
     os = OperatingSystem(
         family = Name.WatchOS.name,
         version = "Unknown"
-    )
+    ),
+    version = "Unknown"
 )
