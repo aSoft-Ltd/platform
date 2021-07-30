@@ -9,5 +9,6 @@ actual object Platform : ExecutionEnvironment(
     os = OperatingSystem(
         family = Name.iOS.name,
         version = "Unknown"
-    )
+    ),
+    version = "Unknown"
 )

@@ -11,5 +11,6 @@ actual object Platform : ExecutionEnvironment(
     os = OperatingSystem(
         family = Name.Android.name,
         version = Build.VERSION.RELEASE
-    )
+    ),
+    version = Build.VERSION.RELEASE
 )
